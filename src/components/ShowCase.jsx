@@ -9,7 +9,7 @@ function ShowCase() {
       <div className="w-[80%] h-[30%] flex justify-between items-center">
         <div className="w-[70%]">
           <span className="text-[50px] font-bold">
-            &#123; Modern &#125; <br /> Responsive Web & Mobile.
+            &#123; Modern &#125; <br /> Responsive Web & Mobile
           </span>
         </div>
         <span className="text-[200px] text-gray-500 font-bold">**</span>
@@ -61,7 +61,7 @@ function ShowCase() {
         <div className="w-[70%]">
           <span className="text-2xl">
             Transforming your vision into <br /> reality—strategically and
-            creatively.
+            creatively
           </span>
         </div>
         <div className="w-[30%] flex justify-center items-center gap-10">

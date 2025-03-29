@@ -6,6 +6,7 @@ import ShowCase from "./ShowCase";
 import ShowCase2 from "./ShowCase2";
 import Portfolio from "./Portfolio";
 import Services from "./Services";
+import DataCompo from "./DataCompo";
 
 function Wrapper() {
   const [scrolled, setScrolled] = useState(false);
@@ -13,21 +14,20 @@ function Wrapper() {
   useEffect(() => {
     const handleScroll = () => {
       console.log("ScrollY:", window.scrollY); // Debugging
-      setScrolled(window.scrollY > 850);
+      setScrolled(window.scrollY > 50);
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll(); 
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [scrolled]);
 
   return (
-    <div className="w-[100vw] h-[100%] flex flex-col items-center justify-start pt-2  ">
+    <div className="w-full min-h-screen flex flex-col items-center justify-center">
       {/* Sticky Header */}
-      <div className="fixed top-2 right-[50px] w-[350px] h-[80px] flex justify-between pr-5 items-center z-50 gap-10 transition-all duration-300  ">
+      <div className="fixed top-1 right-[50px] w-[350px] h-[80px] flex justify-between pr-5 items-center z-50 gap-10 transition-all duration-300">
         <div
           className={`w-[50%] flex rounded-full py-3 px-3 text-lg hover:cursor-pointer transition-all duration-300 ${
             scrolled ? "bg-blue-600 text-white" : "bg-gray-300 text-black"
@@ -45,8 +45,9 @@ function Wrapper() {
       <Marque />
       <ShowCase />
       <ShowCase2 />
-      <Services />
-      <Portfolio />
+      <DataCompo />
+      {/* <Services />
+      <Portfolio /> */}
       <Footer />
     </div>
   );

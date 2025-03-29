@@ -1,12 +1,12 @@
 import { useState } from 'react'
 import './App.css'
 import Wrapper from './components/Wrapper'
-// import CursorDot from './components/CursorDot' // Uncomment if needed
+import CursorDot from './components/CursorDot' 
 
 function App() {
   return (
-    <div className="w-[100vw] bg-white overflow-x-hidden">
-      {/* <CursorDot /> */}
+    <div className="w-screen h-screen overflow-x-hidden bg-stone-200">
+      <CursorDot />
       <Wrapper />
     </div>
   )

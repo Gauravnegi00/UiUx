@@ -1,6 +1,6 @@
 import React from "react";
-import { FaInstagram, FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
-import Zyrix from "../assets/zyrix.jpeg";
+// import { FaInstagram, FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
+// import Zyrix from "../assets/zyrix.jpeg";
 // import logo from "../assets/logo.png";
 
 const ClientHome = () => {

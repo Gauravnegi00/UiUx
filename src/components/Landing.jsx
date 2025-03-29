@@ -11,7 +11,7 @@ import Hash from "../assets/Hash.png";
 import Cube from "../assets/Cube.png";
 function Landing() {
   return (
-    <div className="border-none w-[96%] h-[95vh] rounded-4xl flex flex-col justify-center items-center relative  ">
+    <div className="border-none w-[96%] h-[95vh] rounded-4xl flex flex-col justify-center items-center relative mt-2 ">
       
       <div className="w-full h-full border-none  ">
         <video
