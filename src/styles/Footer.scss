@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+
+.footer {
+  position: relative;
+  margin-top: 300px;
+  padding: 3rem 0;
+  color: #fff;
+  margin-top: auto;
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  .newsletter {
+    animation: float 4s ease-in-out infinite;
+    
+    form {
+      .animate-fade-in {
+        animation: fadeIn 0.5s ease-in-out;
+      }
+
+      input {
+        transition: all 0.3s ease;
+        &:focus {
+          transform: translateY(-2px);
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+      }
+
+      button {
+        transition: all 0.3s ease;
+        &:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+      }
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .c-nav-tool_list a {
+    transition: transform 0.3s ease;
+    &:hover {
+      transform: translateY(-3px);
+    }
+  }
+
+  &__columns {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  &__col {
+    &-title {
+      font-size: 1.6rem;
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      * ~ span {
+        margin-left: 1rem;
+      }
+    }
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    color: #000;
+    text-decoration: none;
+    * ~ span {
+      margin-left: 1rem;
+    }
+  }
+
+  &__nav {
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  }
+
+  &__copyrights {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 3rem 2rem 0;
+    margin-top: 3rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    animation: float 5s ease-in-out infinite;
+    p {
+      display: flex;
+      a {
+        margin-left: 0.5rem;
+      }
+    }
+  }
+
+  &__parallax {
+    position: absolute;
+    left: 0;
+    top: -300px;
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+
+    &-trees {
+      background-image: url('/images/trees.svg');
+    }
+
+    &-moto {
+      position: absolute;
+      bottom: 80px;
+      left: 50%;
+      margin-left: -250px;
+      height: 200px;
+      width: 150px;
+      background: url('/images/moto.svg') no-repeat center;
+      background-size: contain;
+      animation: moto 8s ease-in-out infinite;
+    }
+
+    &-secondplan {
+      background-image: url('/images/second-plan.svg');
+    }
+
+    &-premierplan {
+      background-image: url('/images/premier-plan.svg');
+    }
+
+    &-voiture {
+      position: absolute;
+      bottom: 40px;
+      right: 10%;
+      height: 100px;
+      width: 200px;
+      background: url('/images/voiture.svg') no-repeat center;
+      background-size: contain;
+      animation: voiture 4s ease-in-out infinite;
+    }
+
+    &-trees,
+    &-premierplan,
+    &-secondplan {
+      position: absolute;
+      inset: 0;
+      background-repeat: repeat-x;
+      background-position-y: 100%;
+      animation: parallax 600s linear infinite;
+    }
+  }
+}
+
+@keyframes parallax {
+  0% {
+    background-position-x: 260px;
+  }
+  100% {
+    background-position-x: -10000vw;
+  }
+}
+
+@keyframes moto {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  5% {
+    transform: translateY(0) rotate(-5deg);
+  }
+  25% {
+    transform: translateY(60px) rotate(-20deg);
+  }
+  49% {
+    transform: translateY(0) rotate(-1deg);
+  }
+  51% {
+    transform: translateY(0) rotate(1deg);
+  }
+  75% {
+    transform: translateY(60px) rotate(20deg);
+  }
+  80% {
+    transform: translateY(60px) rotate(0deg);
+  }
+  98% {
+    transform: translateY(0) rotate(0);
+  }
+}
+
+@keyframes voiture {
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(0);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
