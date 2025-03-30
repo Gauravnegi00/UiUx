@@ -1,15 +1,16 @@
 import React from "react";
 // import { FaInstagram, FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 // import Zyrix from "../assets/zyrix.jpeg";
-// import logo from "../assets/logo.png";
+import logo from "../assets/logo.png";
 
 const ClientHome = () => {
+  
   return (
     <div className="fixed inset-0 bg-white w-full h-screen flex items-center justify-center shadow-lg overflow-hidden">
       <div className="bg-white w-full max-w-4xl flex flex-col md:flex-row shadow-lg">
         <div className="hidden md:block w-1/2 bg-gray-200">
           <img
-            src={Zyrix}
+            // src={Zyrix}
             alt="Background image with text 'THE GREAT APP DESIGN'"
             className="w-full h-full object-cover"
           />

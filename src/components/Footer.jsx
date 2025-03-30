@@ -18,9 +18,8 @@ const Footer = () => {
   };
 
   return (
-    <div>
+    <div className="bg-[#C9D0D5] py-14 font-[Poppins] relative w-screen rounded-4xl">
       
-      <footer className="bg-gray-100 py-14 font-[Poppins] relative">
         <div className="container mx-auto flex flex-col md:flex-row justify-between px-6 lg:px-20">
           
           
@@ -83,7 +82,6 @@ const Footer = () => {
         >
           Back to Top ↑
         </button>
-      </footer>
 
    
       <AnimatePresence>

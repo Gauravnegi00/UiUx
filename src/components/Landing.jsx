@@ -25,7 +25,7 @@ function Landing() {
         </video>
       </div>
       {/* Over lay */}
-      <div className="absolute w-full h-full rounded-4xl flex flex-col  bg-opacity-10 backdrop-blur-[2px] shadow-lg ">
+      <div className="absolute w-full h-full rounded-4xl flex flex-col  bg-opacity-10  shadow-lg ">
         <div className="w-full h-[80px] p-10 flex items-center  pl-[50px] font-bold ">
           
           <div className="flex items-center space-x-2  ">
@@ -66,7 +66,8 @@ function Landing() {
               <div className="w-[90px] h-[90px] rounded-full bg-[#4441f1b4] hover:bg-[#4541f1] hover:text-white cursor-pointer bg-opacity-20 backdrop-blur-lg shadow-lg flex justify-center items-center ">
                 <i class="fi fi-br-arrow-down text-4xl "></i>
               </div>
-              <img src={Epic} alt="pic" width={"350px"} />
+              {/* <img src={Epic} alt="pic" width={"350px"} /> */}
+              <span className="text-[150px] font-bold "   >Epic</span>
             </div>
 
             <span className="text-[100px] font-bold  fontcls ">

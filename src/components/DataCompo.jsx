@@ -4,7 +4,7 @@ import img2 from "../assets/img2.jpg";
 
 const DataCompo = () => {
   return (
-    <div className="h-screen w-screen bg-stone-300 flex items-center justify-center p-4  space-y-20 ">
+    <div className="h-screen w-screen bg-[#F8F5F2] flex items-center justify-center p-4  space-y-20 ">
       <div className="h-[95%] w-[95%] max-w-none flex flex-col items-center justify-center  shadow-2xl bg-[#f8f5f2] rounded-[100px]  gap-6 font-[Poppins] text-center p-8">
         
        
