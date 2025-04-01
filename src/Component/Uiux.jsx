@@ -5,7 +5,7 @@ import ClientHome from "./ClientHome";
 import phone1 from "../assets/phn1.webp";
 import phone2 from "../assets/phn2.webp";
 import iphone3 from "../assets/iphone01.jpg";
-import phone4 from "../assets/02.jpg";
+import laptop from "../assets/laptop01.png";
 
 const AnimatedImage = ({ src, alt, size }) => (
   <motion.img
@@ -24,26 +24,28 @@ const UiUx = () => {
     setShowClientHome(true);
   };
 
+  const handleCloseClientHome = () => {
+    setShowClientHome(false); 
+  };
+
   return (
     <div className="w-full min-h-screen bg-black text-white overflow-hidden">
-      {/* Conditional Rendering of ClientHome Component */}
       {showClientHome ? (
-        <ClientHome />
+        <ClientHome onClose={handleCloseClientHome} />
       ) : (
         <>
           <button
-                onClick={handleBecomeClient}
-                 className="w-[10%] relative top-10 left-275 bg-[#d8d2d294] flex rounded-full py-3 px-3 text-lg hover:cursor-pointer font-bold
-            hover:bg-blue-600 hover:text-white hover:font-bold  transition-all duration-300 ease-in-out "
-              >
-                Become a Client
-              </button>
-              <button
-            className="w-[9%]  bg-[#d8d2d294] relative top-[-12px] left-320 flex rounded-full py-3 px-3 text-lg hover:cursor-pointer font-bold
-            hover:bg-blue-600 hover:text-white hover:font-bold  transition-all duration-300 ease-in-out "
+            onClick={handleBecomeClient}
+            className="w-[10%] relative top-10 left-275 bg-[#d8d2d294] flex rounded-full py-3 px-3 text-lg hover:cursor-pointer font-bold hover:bg-blue-600 hover:text-white transition-all duration-300 ease-in-out"
+          >
+            Become a Client
+          </button>
+          <button
+            className="w-[9%] bg-[#d8d2d294] relative top-[-12px] left-320 flex rounded-full py-3 px-3 text-lg hover:cursor-pointer font-bold hover:bg-blue-600 hover:text-white transition-all duration-300 ease-in-out"
           >
             Back to Main
           </button>
+
           <header className="flex flex-col items-center py-16">
             <motion.div
               initial={{ opacity: 0, y: -100 }}
@@ -51,7 +53,6 @@ const UiUx = () => {
               transition={{ duration: 1.5 }}
               className="inline-block"
             >
-             
               <h1 className="text-7xl font-extrabold tracking-wide bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
                 UI/UX Portfolio
               </h1>
@@ -102,7 +103,7 @@ const UiUx = () => {
 
                 <motion.img
                   src={phone1}
-                  alt="Laptop"
+                  alt="phone"
                   className="h-[510px] w-[400px] object-cover rounded-3xl shadow-2xl transition-all duration-300"
                   animate={{ y: [0, -80, 0] }}
                   transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
@@ -120,9 +121,9 @@ const UiUx = () => {
                 transition={{ duration: 1.5 }}
               >
                 <AnimatedImage
-                  src={phone4}
+                  src={laptop}
                   alt="Online Platform UI"
-                  size="h-[600px] w-[300px]"
+                  size="h-[500px] w-[500px]"
                 />
               </motion.div>
 
@@ -175,8 +176,7 @@ const UiUx = () => {
             </div>
           </section>
 
-          {/* Back to Main Button */}
-         
+     
         </>
       )}
     </div>
