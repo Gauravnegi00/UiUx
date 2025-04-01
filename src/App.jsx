@@ -1,13 +1,12 @@
+// eslint-disable-next-line no-unused-vars
 import { useState } from 'react'
 import './App.css'
-import Wrapper from './components/Wrapper'
-import CursorDot from './components/CursorDot' 
+import UiUx from './Component/Uiux'
 
 function App() {
   return (
     <div className="w-screen h-screen overflow-x-hidden bg-stone-200">
-      <CursorDot />
-      <Wrapper />
+      <UiUx/>
     </div>
   )
 }
