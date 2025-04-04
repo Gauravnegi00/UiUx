@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import ClientHome from "./ClientHome";
-
 import phone1 from "../assets/phn1.webp";
 import phone2 from "../assets/phn2.webp";
 
