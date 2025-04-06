@@ -1,6 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 body{
  margin: 0;
  padding: 0;
- box-sizing: border-box;   
-
+ box-sizing: border-box;  
+    font-family: 'Poppins';
+  
 }
+
+/* responsive.css */
+
+@media (max-width: 768px) 
+{
+    #uiux-container {
+      padding: 1rem;
+    }
+  
+    #main-title {
+      font-size: 1.3rem;
+        position: relative;
+        right: 100px;
+        bottom: 20px;
+    }
+  
+    #subtitle {
+      font-size: 1rem;
+      width: 100%;
+      margin-top: 3.5rem;
+      /* padding: 0 1rem; */
+    }
+  
+    #nav-buttons {
+      flex-direction: row;
+      gap: 0.5rem;
+      position: relative;
+      top: -180px;
+      right: -185px;
+      /* font-size: 0.3rem; */
+      /* padding: 17px 16px;x */
+    }
+
+  #client-button,
+  #main-button
+  {
+    height: auto;
+    width: auto;
+    padding: 10px 10px;
+    font-size: 0.5rem;
+  }
+
+  #main-button{
+    height: 34px;
+  }
+  
+    #compatibility-section {
+      height: auto;
+      margin-left: -30px;
+      margin-top: -20px;
+    }
+  
+    #content-wrapper {
+      flex-direction: row;
+      text-align: center;
+      padding: 1rem;
+    }
+  
+    #text-content {
+      width: 100%;
+    }
+  
+    #section-title {
+      font-size: 2.5rem;
+      width: 350px;
+      margin-top: 100px;
+    }
+    #section-description {
+      font-size: 1rem;
+      width: 320px;
+    }
+  
+    #phone-images {
+      flex-direction: column;
+      gap: 2rem;
+    }
+  
+    #phone-image-1,
+    #phone-image-2 {
+      /* width: 100%; */
+      height: 240px;
+      max-width: 150px;
+      margin-top: 110px;
+    }
+     #phone-image-1{
+        position: relative;
+        bottom: 60px;
+        right: 270px;
+    }
+     #phone-image-2{
+        position: relative;
+        bottom: 400px;
+        right: 150px;
+    }
+
+
+    /* marquee component */
+
+    #marqueeDIv{
+        width: 100%;
+        height: 150px;
+    }
+    #marque{
+        margin-top: 40px;
+       font-size: 50px;
+    }
+
+    /* image slider */
+    #imgslider-container {
+        height: auto;
+        padding: 1.4rem;
+        flex-direction: column;
+      }
+    
+      #imgslider-wrapper {
+        margin-top: 100px;
+        width: 100%;
+      }
+    
+      [id^="slider-card-"] {
+        /* height: auto; */
+        margin: 0rem 0;
+      }
+    
+      [id^="slider-card-imgbox-"] {
+        height: 190px;
+      }
+    
+      [id^="slider-img-"] {
+        height: 150px;
+        width: 150px;
+      }
+    
+      [id^="slider-card-textbox-"] {
+        padding: 1rem;
+        gap: 0.5rem;
+      }
+    
+      [id^="slider-title-"] {
+        font-size: 1.125rem; 
+      }
+    
+      [id^="slider-description-"] {
+        max-height: none ;
+      }
+    
+      [id^="slider-button-"] {
+        font-size: 0.875rem; /* text-sm */
+        padding: 0.5rem 1rem;
+      }
+
+
+      /* client home component */
+      #clientHomeContainer {
+        flex-direction: column;
+        height: auto;
+        overflow-y: auto;
+      }
+    
+      #clientHomeLeft,
+      #clientHomeRight {
+        width: 100% !important;
+        height: auto !important;
+      }
+    
+      #clientLogoContainer {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        text-align: center;
+      }
+    
+      #clientLogo {
+        width: 150px;
+        height: 200px;
+      }
+    
+      #clientTitle {
+        font-size: 32px;
+        margin-top: 1rem;
+      }
+    
+      #clientDesc {
+        font-size: 16px;
+        position: static;
+        margin-top: 1rem;
+      }
+    
+      #clientContactSocial {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+      }
+    
+      #clientDivider {
+        display: none;
+      }
+    
+      #clientSocialLinks {
+        align-items: center;
+        width: auto;
+      }
+    
+      #closeButton {
+        top: 10px;
+        right: 10px;
+      }
+    
+      #formTitle {
+        font-size: 28px;
+        margin-top: 1rem;
+      }
+    
+      #arrowIcon {
+        width: 100px;
+        margin-left: 0;
+      }
+    
+      #formSubtitle {
+        position: static;
+        font-size: 16px;
+        margin-top: 1rem;
+      }
+    
+      #inputRow {
+        flex-direction: column;
+        gap: 1rem;
+      }
+    
+      #submitBtn {
+        width: 100%;
+        height: 50px;
+        font-size: 16px;
+      }
+    
+      .form-input,
+      .textarea {
+        width: 100%;
+        padding: 1rem;
+      }
+  }
+  

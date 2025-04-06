@@ -94,47 +94,62 @@ const ImgSlider = () => {
   ];
 
   return (
-    <div className="h-screen bg-black flex justify-center items-center">
-      <div className="w-3/4">
-        <Slider {...settings}>
-          {data.map((d, index) => (
+    <div id="imgslider-container" className="h-screen bg-black flex justify-center items-center">
+  <div id="imgslider-wrapper" className="w-3/4">
+    <Slider {...settings}>
+      {data.map((d, index) => (
+        <div
+          key={index}
+          id={`slider-card-${index}`}
+          className="bg-white text-black rounded-xl shadow-md transition-all duration-500 h-[450px] flex flex-col"
+        >
+          <div
+            id={`slider-card-imgbox-${index}`}
+            className="h-56 rounded-t-xl bg-indigo-500 flex justify-center items-center"
+          >
+            <img
+              id={`slider-img-${index}`}
+              src={d.img}
+              alt="Service"
+              className="h-44 w-44 object-cover rounded-full"
+            />
+          </div>
+
+          <div
+            id={`slider-card-textbox-${index}`}
+            className="flex flex-col justify-between items-center gap-4 p-4 flex-grow"
+          >
+            <p id={`slider-title-${index}`} className="text-xl font-semibold">
+              {d.name}
+            </p>
+
             <div
-              key={index}
-              className="bg-white text-black rounded-xl shadow-md transition-all duration-500 h-[450px] flex flex-col"
+              id={`slider-description-${index}`}
+              className={`transition-all duration-500 overflow-hidden ${
+                expandedIndex === index ? "max-h-40" : "max-h-12"
+              }`}
             >
-              <div className="h-56 rounded-t-xl bg-indigo-500 flex justify-center items-center">
-                <img
-                  src={d.img}
-                  alt="Service"
-                  className="h-44 w-44 object-cover rounded-full"
-                />
-              </div>
-
-              <div className="flex flex-col justify-between items-center gap-4 p-4 flex-grow">
-                <p className="text-xl font-semibold">{d.name}</p>
-
-                {/* Expanding Text Section */}
-                <div className={`transition-all duration-500 overflow-hidden ${expandedIndex === index ? "max-h-40" : "max-h-12"}`}>
-                  <p className="text-center">
-                    {expandedIndex === index ? d.details : d.review}
-                  </p>
-                </div>
-
-                {/* Read More Button */}
-                <button
-                  onClick={() =>
-                    setExpandedIndex(expandedIndex === index ? null : index)
-                  }
-                  className="bg-indigo-500 text-white text-lg px-6 py-1 rounded-xl hover:bg-indigo-600 transition-all"
-                >
-                  {expandedIndex === index ? "Show Less" : "Read More"}
-                </button>
-              </div>
+              <p className="text-center">
+                {expandedIndex === index ? d.details : d.review}
+              </p>
             </div>
-          ))}
-        </Slider>
-      </div>
-    </div>
+
+            <button
+              id={`slider-button-${index}`}
+              onClick={() =>
+                setExpandedIndex(expandedIndex === index ? null : index)
+              }
+              className="bg-indigo-500 text-white text-lg px-6 py-1 rounded-xl hover:bg-indigo-600 transition-all"
+            >
+              {expandedIndex === index ? "Show Less" : "Read More"}
+            </button>
+          </div>
+        </div>
+      ))}
+    </Slider>
+  </div>
+</div>
+
   );
 };
 
