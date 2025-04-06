@@ -19,7 +19,7 @@ body{
     #main-title {
       font-size: 1.3rem;
         position: relative;
-        right: 100px;
+        right: 90px;
         bottom: 20px;
     }
   
@@ -150,7 +150,7 @@ body{
       }
     
       [id^="slider-description-"] {
-        max-height: none ;
+        max-height: auto ;
       }
     
       [id^="slider-button-"] {
@@ -159,93 +159,5 @@ body{
       }
 
 
-      /* client home component */
-      #clientHomeContainer {
-        flex-direction: column;
-        height: auto;
-        overflow-y: auto;
-      }
-    
-      #clientHomeLeft,
-      #clientHomeRight {
-        width: 100% !important;
-        height: auto !important;
-      }
-    
-      #clientLogoContainer {
-        flex-direction: column;
-        align-items: center;
-        padding: 1rem;
-        text-align: center;
-      }
-    
-      #clientLogo {
-        width: 150px;
-        height: 200px;
-      }
-    
-      #clientTitle {
-        font-size: 32px;
-        margin-top: 1rem;
-      }
-    
-      #clientDesc {
-        font-size: 16px;
-        position: static;
-        margin-top: 1rem;
-      }
-    
-      #clientContactSocial {
-        flex-direction: column;
-        gap: 1rem;
-        align-items: center;
-      }
-    
-      #clientDivider {
-        display: none;
-      }
-    
-      #clientSocialLinks {
-        align-items: center;
-        width: auto;
-      }
-    
-      #closeButton {
-        top: 10px;
-        right: 10px;
-      }
-    
-      #formTitle {
-        font-size: 28px;
-        margin-top: 1rem;
-      }
-    
-      #arrowIcon {
-        width: 100px;
-        margin-left: 0;
-      }
-    
-      #formSubtitle {
-        position: static;
-        font-size: 16px;
-        margin-top: 1rem;
-      }
-    
-      #inputRow {
-        flex-direction: column;
-        gap: 1rem;
-      }
-    
-      #submitBtn {
-        width: 100%;
-        height: 50px;
-        font-size: 16px;
-      }
-    
-      .form-input,
-      .textarea {
-        width: 100%;
-        padding: 1rem;
-      }
-  }
+    }
   

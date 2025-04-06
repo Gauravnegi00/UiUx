@@ -117,7 +117,7 @@ const ImgSlider = () => {
 
           <div
             id={`slider-card-textbox-${index}`}
-            className="flex flex-col justify-between items-center gap-4 p-4 flex-grow"
+            className=" flex flex-col justify-between items-center gap-4 p-4 flex-grow"
           >
             <p id={`slider-title-${index}`} className="text-xl font-semibold">
               {d.name}
@@ -125,8 +125,8 @@ const ImgSlider = () => {
 
             <div
               id={`slider-description-${index}`}
-              className={`transition-all duration-500 overflow-hidden ${
-                expandedIndex === index ? "max-h-40" : "max-h-12"
+              className={` text-[15px] transition-all duration-500 overflow-hidden ${
+                expandedIndex === index ?  "max-h-[999px]" : "max-h-16"
               }`}
             >
               <p className="text-center">
