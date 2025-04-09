@@ -20,7 +20,7 @@ const ClientHome = ({ onClose }) => {
   return (
     <div className="fixed z-101 inset-0 w-full h-screen flex items-center justify-center shadow-lg overflow-hidden">
       {/* Left Section */}
-      <div className="w-1/2 h-screen bg-[#4f2424c6] flex flex-col gap-2 justify-center items-center">
+      <div id="left" className="w-1/2 h-screen bg-[#4f2424c6] flex flex-col gap-2 justify-center items-center">
         <div className="w-[70%] relative h-[400px] flex">
           <img
             src={logo}
@@ -109,104 +109,112 @@ const ClientHome = ({ onClose }) => {
       </div>
 
       {/* Right Section (Form) */}
-      <div className="w-1/2 h-screen font-serif bg-[#5f4b4ba1] p-5">
-        <div className="relative">
-          {/* Close Button */}
+      <div id="right" className="w-1/2 h-screen font-serif bg-[#5f4b4ba1] p-5">
+  <div className="relative" id="right-container">
+    {/* Close Button */}
+    <FiX
+      id="close-btn"
+      onClick={() => onClose()}
+      size={24}
+      color="white"
+      className="size-10 text-white absolute right-10 flex justify-center items-center rounded-full hover:scale-[1.1] hover:cursor-pointer hover:bg-black hover:text-white transition-all duration-500 ease-in-out"
+    />
 
-          <FiX onClick={() => onClose()} 
-          size={24}
-          color="white"
-          className=" size-10 text-white absolute right-10 flex justify-center items-center rounded-full hover:scale-[1.1] hover:cursor-pointer hover:bg-black hover:text-white transition-all duration-500 ease-in-out"
-           />
+    <h2 className="text-5xl" id="contact-heading">Let's get in touch</h2>
+    <img
+      id="down-arrow"
+      src={downArrow}
+      loading="lazy"
+      alt="Down Arrow"
+      className="w-[150px] ml-[-55px]"
+    />
 
-          <h2 className="text-5xl">Let's get in touch</h2>
-          <img
-            src={downArrow}
-            loading="lazy"
-            alt="Down Arrow"
-            className="w-[150px] ml-[-55px]"
+    <span
+      id="contact-subtext"
+      className="absolute top-17 left-10 text-[18px]"
+    >
+      Excited to bring your vision to life! Let’s create something amazing
+      together.
+      <br />
+      Call us for any inquiry.
+    </span>
+
+    {/* Form */}
+    <form onSubmit={handleSubmit} id="contact-form">
+      <div className="w-full mt-5" id="form-wrapper">
+        <span className="text-2xl" id="name-label">
+          <label htmlFor="name">Name & Company</label>
+        </span>
+        <span className="text-2xl ml-10" id="email-label">
+          <label htmlFor="email">Your Email</label>
+        </span>
+
+        <div className="w-full mt-5 flex gap-5" id="input-wrapper">
+          <div id="name-input-box">
+            <input
+              type="text"
+              name="name"
+              id="name-input"
+              placeholder="Ansh from zyrixcraft"
+              className="bg-[#b8a4a45d] p-5 border-none rounded-2xl"
+            />
+            <ValidationError
+              prefix="Name"
+              field="name"
+              errors={state.errors}
+              className="mt-1 text-sm text-red-600"
+            />
+          </div>
+
+          <div id="email-input-box">
+            <input
+              type="email"
+              name="email"
+              id="email-input"
+              placeholder="ansh@gmail.com"
+              className="bg-[#b8a4a45d] p-5 border-none rounded-2xl"
+            />
+            <ValidationError
+              prefix="Email"
+              field="email"
+              errors={state.errors}
+              className="mt-1 text-sm text-red-600"
+            />
+          </div>
+        </div>
+
+        <div className="flex flex-col mt-5" id="message-wrapper">
+          <span className="text-2xl" id="message-label">
+            <label id="message" htmlFor="message">Tell us more about your project</label>
+          </span>
+          <textarea
+            name="message"
+            id="message-textarea"
+            placeholder="Something about your great idea"
+            className="mt-5 w-full h-[200px] border-none bg-[#b8a4a45d] rounded-2xl p-5 pt-2 text-left resize-none"
+          />
+          <ValidationError
+            prefix="Message"
+            field="message"
+            errors={state.errors}
+            className="mt-1 text-sm text-red-600"
           />
 
-          <span className="absolute top-17 left-10 text-[18px]">
-            Excited to bring your vision to life! Let’s create something amazing
-            together.
-            <br />
-            Call us for any inquiry.
-          </span>
-
-          {/* Form */}
-          <form onSubmit={handleSubmit}>
-            <div className="w-full mt-5">
-              <span className="text-2xl">
-                <label htmlFor="name">Name & Company</label>
-              </span>
-              <span className="text-2xl ml-10">
-                <label htmlFor="name">Your Email</label>
-              </span>
-              <div className="w-full mt-5 flex gap-5">
-                <div>
-                  <input
-                    type="text"
-                    name="name"
-                    id="name"
-                    placeholder="Ansh from zyrixcraft"
-                    className="bg-[#b8a4a45d] p-5 border-none rounded-2xl"
-                  />
-                  <ValidationError
-                    prefix="Name"
-                    field="name"
-                    errors={state.errors}
-                    className="mt-1 text-sm text-red-600"
-                  />
-                </div>
-
-                <div>
-                  <input
-                    type="email"
-                    name="email"
-                    id="email"
-                    placeholder="ansh@gmail.com"
-                    className="bg-[#b8a4a45d] p-5 border-none rounded-2xl"
-                  />
-                  <ValidationError
-                    prefix="Email"
-                    field="email"
-                    errors={state.errors}
-                    className="mt-1 text-sm text-red-600"
-                  />
-                </div>
-              </div>
-
-              <div className="flex flex-col mt-5">
-                <span className="text-2xl">
-                  <label htmlFor="name">Tell us more about your project</label>
-                </span>
-                <textarea
-                  name="message"
-                  id="message"
-                  placeholder="Something about your great idea"
-                  className="mt-5 w-full h-[200px] border-none bg-[#b8a4a45d] rounded-2xl p-5 pt-2 text-left resize-none"
-                />
-                <ValidationError
-                  prefix="Message"
-                  field="message"
-                  errors={state.errors}
-                  className="mt-1 text-sm text-red-600"
-                />
-
-                <button
-                  type="submit"
-                  disabled={state.submitting}
-                  className="w-[250px] text-[18px] flex gap-2 justify-center items-center h-[60px] mt-3 rounded-full bg-black text-white font-bold transition-all duration-500 ease-in-out hover:bg-white hover:text-black hover:shadow-lg hover:cursor-pointer"
-                >
-                  {state.submitting ? "Sending..." : "Send Message"}
-                  <i className="fi fi-rr-arrow-small-right mt-2 text-2xl"></i>
-                </button>
-              </div>
-            </div>
-          </form>
+          <button
+            id="submit-btn"
+            type="submit"
+            disabled={state.submitting}
+            className="w-[250px] text-[18px] flex gap-2 justify-center items-center h-[60px] mt-3 rounded-full bg-black text-white font-bold transition-all duration-500 ease-in-out hover:bg-white hover:text-black hover:shadow-lg hover:cursor-pointer"
+          >
+            {state.submitting ? "Sending..." : "Send Message"}
+            <i className="fi fi-rr-arrow-small-right mt-2 text-2xl"></i>
+          </button>
         </div>
       </div>
+    </form>
+  </div>
+</div>
+
 
       {/* Toast Notification */}
       <ToastContainer position="top-right" autoClose={3000} />

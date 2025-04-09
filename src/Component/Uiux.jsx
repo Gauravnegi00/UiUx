@@ -57,11 +57,13 @@ const UiUx = () => {
               Become a Client
             </button>
             <button
-              id="main-button"
-              className="bg-[#d8d2d294] h-[55px] rounded-full py-3 px-6 text-lg font-bold hover:bg-blue-600 hover:text-white transition-all duration-300 ease-in-out"
-            >
-              Back to Main
-            </button>
+                id="main-button"
+                className="bg-[#d8d2d294] h-[55px] rounded-full py-3 px-6 text-lg font-bold hover:bg-blue-600 hover:text-white transition-all duration-300 ease-in-out"
+                onClick={() => window.open('https://zyrixcraft.in/', '_blank')}
+              >
+                Back to Main
+              </button>
+
           </div>
 
           {/* Section 1 */}
